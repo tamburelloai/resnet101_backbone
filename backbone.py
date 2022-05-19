@@ -37,8 +37,8 @@ class Resnet101Backbone(nn.Module):
         C2 = self.C2(x)
         C3 = self.C3(C2)
         C4 = self.C4(C3)
-        return [C2, C3, C4]
-        
+        #return [C2, C3, C4]
+        #TODO: SET BACKBONE TO EVAL() TO FREEZE CHECK BEST METHOD IF NOT EVAL()
 
 x = torch.randn(1, 3, 224, 224)
 model = Resnet101Backbone()
